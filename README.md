@@ -1,140 +1,94 @@
-# Project Setup: React + Vite + Tailwind + Framer Motion
+Juspay Dashboard
+Description
+The Juspay Dashboard is a dynamic and interactive dashboard application designed for eCommerce management. It visualizes business metrics like revenue, sales, and product performance through a variety of charts and data tables. The dashboard is built with modern technologies like React, Framer Motion, Tailwind CSS, and Recharts. It supports both light and dark modes, offering a smooth and visually appealing user experience.
 
-This guide will help you install and run a React project using Vite, with additional packages including Tailwind CSS, Framer Motion, and ESLint configuration.
+Features
+Responsive Design: Adapts to various screen sizes, including mobile, tablet, and desktop.
+Dark/Light Mode Toggle: Seamless transitions between dark and light modes.
+Data Visualizations:
+Bar charts, line charts, and pie charts to display revenue, sales, and projections.
+Interactive map for visualizing revenue by location.
+Animations: Smooth transitions using Framer Motion for enhanced user interaction.
+Top-Selling Products: Displays a list of top-selling products with relevant data.
+Revenue Projections vs. Actuals: Compares projected revenue against actual data.
+Tech Stack
+React.js: Frontend framework used for building user interfaces.
+Tailwind CSS: Utility-first CSS framework for fast and responsive UI development.
+Recharts: Library for building chart visualizations.
+Framer Motion: Used for animations and smooth transitions.
+React Router: For client-side routing within the dashboard.
+Context API: To handle global state management, including dark mode toggle.
+.
+├── public               # Static assets
+├── src
+│   ├── assets           # Images, icons, and other static files
+│   ├── components       # Reusable React components
+│   ├── context          # Context API for global state (e.g., dark mode)
+│   ├── pages            # Dashboard page and other page components
+│   ├── constant.js      # Mock data and constants
+│   └── App.js           # Main entry point for the React app
+├── .gitignore           # Files to ignore in Git
+├── package.json         # Project metadata and dependencies
+└── README.md            # Project documentation
+Key Components
+1. Dashboard
+Displays the main dashboard with revenue projections, top-selling products, and charts for sales and revenue data.
+2. Charts
+Projections vs Actuals: A bar chart comparing revenue projections against actual values.
+Revenue by Location: An interactive map displaying the revenue generated from different regions.
+Total Sales: A pie chart showing the distribution of total sales by product categories.
+3. Top Selling Products Table
+A detailed table listing top-selling products, including product names, prices, and sales data.
+Installation and Setup
+Prerequisites
+Node.js (>= 14.x)
+npm or yarn
+Steps to Install
+Clone the repository:
 
-### Hosted URL:
+bash
+Copy code
+git clone https://github.com/kaushikd207/juspay-dashboard.git
+Navigate to the project directory:
 
-- https://byewind-dashboard-tanmay.vercel.app/
+bash
+Copy code
+cd juspay-dashboard
+Install dependencies:
 
-## Prerequisites
-
-Make sure you have the following installed on your machine:
-
-- [Node.js](https://nodejs.org/) (version 14.18.0 or higher)
-- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/) package manager
-
-## Installation Steps
-
-### 1. Clone the Repository
-
-```bash
-git clone https://github.com/sirtanmay/byewind-dashboard.git
-cd byewind-dashboard
-```
-
-### 2. Install Dependencies
-
-Run the following command to install all necessary packages:
-
-```bash
+bash
+Copy code
 npm install
-```
-
-Alternatively, you can use Yarn:
-
-```bash
+# or
 yarn install
-```
+Start the development server:
 
-### 3. Run the Development Server
+bash
+Copy code
+npm start
+# or
+yarn start
+Open the app in your browser:
 
-To start the Vite development server with hot module replacement (HMR), use the following command:
+http://localhost:3000
+Usage
+The dashboard can be used to visualize eCommerce metrics like revenue projections, actual sales, and top-selling products. Switch between dark and light mode for a customized experience.
 
-```bash
-npm run dev
-```
+Screenshots
+![d1](https://github.com/user-attachments/assets/192adafe-67dc-455e-9e1e-c263be18c466)
+![d2](https://github.com/user-attachments/assets/600fd1f0-4717-4281-b746-1020fcdc7a3c)
+![d3](https://github.com/user-attachments/assets/3d9cabc5-cc9d-4ae4-b44d-361122518422)
+![d4](https://github.com/user-attachments/assets/b310b808-b888-4732-b988-0ceadcc91cb6)
 
-or with Yarn:
 
-```bash
-yarn dev
-```
 
-The development server should start at `http://localhost:5173`.
+2. Dark Mode
 
-### 4. Build the Project
+Customization
+To customize the dashboard:
 
-To build the project for production, run:
-
-```bash
-npm run build
-```
-
-or with Yarn:
-
-```bash
-yarn build
-```
-
-### 5. Preview the Production Build
-
-To preview the production build, you can use:
-
-```bash
-npm run preview
-```
-
-or with Yarn:
-
-```bash
-yarn preview
-```
-
-## Tailwind CSS Integration
-
-This project includes [Tailwind CSS](https://tailwindcss.com/) for styling. It is already configured with `postcss` and `autoprefixer`. To make changes to the design, modify the `tailwind.config.js` file.
-
-Tailwind is applied to all components using utility-first CSS, allowing for rapid UI development.
-
-## Framer Motion
-
-Framer Motion is used for animations. You can easily add animations to your components by importing `motion` from `framer-motion` and wrapping your components.
-
-Example:
-
-```jsx
-import { motion } from "framer-motion";
-
-const Component = () => (
-	<motion.div
-		initial={{ opacity: 0 }}
-		animate={{ opacity: 1 }}
-		transition={{ duration: 1 }}
-	>
-		Hello, World!
-	</motion.div>
-);
-```
-
-## ESLint Configuration
-
-The project includes [ESLint](https://eslint.org/) with the following plugins:
-
-- `eslint-plugin-react`
-- `eslint-plugin-react-hooks`
-- `eslint-plugin-react-refresh`
-
-The ESLint configuration is located in `.eslintrc` and helps maintain code quality. Ensure to run the linter before pushing changes:
-
-```bash
-npm run lint
-```
-
-or with Yarn:
-
-```bash
-yarn lint
-```
-
-## Available Scripts
-
-- `npm run dev`: Starts the development server.
-- `npm run build`: Builds the project for production.
-- `npm run preview`: Previews the production build.
-- `npm run lint`: Lints the codebase with ESLint.
-
-## Additional Configuration
-
-- **Vite Plugin React**: For fast refresh and optimized builds using Vite.
-- **PostCSS and Autoprefixer**: Configured for cross-browser compatibility.
-# juspay-dashboard
+Modify data in the constant.js file to display different datasets.
+Change the styling using Tailwind CSS classes in the respective components.
+Add new components or routes using React Router.
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
